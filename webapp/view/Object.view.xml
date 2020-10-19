@@ -1,31 +1,13 @@
-<mvc:View
-	controllerName="jd.poc.product.app.ProductApp.controller.Object"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:semantic="sap.f.semantic"
-	xmlns:footerbar="sap.ushell.ui.footerbar">
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.f.semantic" xmlns:footerbar="sap.ushell.ui.footerbar" controllerName="jd.poc.product.app.ProductApp.controller.Object">
 
-	<semantic:SemanticPage
-		id="page"
-		headerPinnable="false"
-		toggleHeaderOnTitleClick="false"
-		busy="{objectView>/busy}"
-		busyIndicatorDelay="{objectView>/delay}">
+	<semantic:SemanticPage id="page" headerPinnable="false" toggleHeaderOnTitleClick="false" busy="{objectView>/busy}" busyIndicatorDelay="{objectView>/delay}">
 
 		<semantic:titleHeading>
-			<Title
-				text="{Name}"
-				level="H2"/>
+			<Title text="{Name}" level="H2"/>
 		</semantic:titleHeading>
 
 		<semantic:headerContent>
-			<ObjectNumber
-				number="{
-					path: 'Price',
-					formatter: '.formatter.numberUnit'
-				}"
-				unit="{Currency}"
-			/>
+			<ObjectNumber number="{      path: 'Price',      formatter: '.formatter.numberUnit'     }" unit="{Currency}"/>
 		</semantic:headerContent>
 
 		<semantic:sendEmailAction>
@@ -37,8 +19,14 @@
 		</semantic:shareInJamAction>
 
 		<semantic:saveAsTileAction>
-			<footerbar:AddBookmarkButton id ="shareTile" title="{objectView>/saveAsTileTitle}"/>
+			<footerbar:AddBookmarkButton id="shareTile" title="{objectView>/saveAsTileTitle}"/>
 		</semantic:saveAsTileAction>
+
+	<semantic:content>
+
+	    <ObjectAttribute text="{Segment}" id="Segment" title="Segment"/>
+
+	</semantic:content>
 
 	</semantic:SemanticPage>
 
